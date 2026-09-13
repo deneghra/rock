@@ -32,20 +32,6 @@ proxies:
     path: /proxyip=154.3.33.43
     headers:
       Host: mianfei-73q.pages.dev
-- name: 🇨🇿 CZ 03 - xiaohe
-  type: vless
-  server: 172.67.149.222
-  port: 443
-  uuid: 995d8fdb-36e0-cf6e-e9e8-88ead972fce2
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: eagle-panel.roya6777.workers.dev
-  network: ws
-  ws-opts:
-    path: /ws/995d8fdb-36e0-cf6e-e9e8-88ead972fce2
-    headers:
-      Host: eagle-panel.roya6777.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
@@ -53,7 +39,6 @@ proxy-groups:
   - AUTO
   - 🇨🇿 CZ 01 - xiaohe
   - 🇨🇿 CZ 02 - xiaohe
-  - 🇨🇿 CZ 03 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -61,6 +46,5 @@ proxy-groups:
   proxies:
   - 🇨🇿 CZ 01 - xiaohe
   - 🇨🇿 CZ 02 - xiaohe
-  - 🇨🇿 CZ 03 - xiaohe
 rules:
 - MATCH,PROXIES
